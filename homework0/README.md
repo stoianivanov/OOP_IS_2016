@@ -1,23 +1,24 @@
 Имаме структурите:
 
-struct Destination
-{
-	City city;
-	int kilometers;
-}
 
-struct City
-{
-	char* name;
-	int population; // в хиляди 
-	bool hasMuseum;
-}
+	struct Destination
+	{
+		City city;
+		int kilometers;
+	}
 
-struct GPS 
-{
-	City currentCity;
-	Destination[10] path;
-}
+	struct City
+	{
+		char* name;
+		int population; // в хиляди 
+		bool hasMuseum;
+	}
+
+	struct GPS 
+	{
+		City currentCity;
+		Destination[10] path;
+	}
 
 Трябва да си създадем 2 инстанции от тип City. Например:
 name  | population | hasMuseum
