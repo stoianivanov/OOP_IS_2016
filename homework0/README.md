@@ -21,17 +21,18 @@
 	}
 
 Трябва да си създадем 2 инстанции от тип City. Например:
-name  | population | hasMuseum
-Varna | 500        | False 
-Sofia | 2 000      | True
+	name  | population | hasMuseum
+	Varna | 500        | False 
+	Sofia | 2 000      | True
 
 Трябва да се създаде една инстанция на GPS. Например:
-CurrentCity      | path
-Sofia			 | [Plovdiv, Varna, Burgas Vidin, Ruse,
-					Blagoevgrad(Best city ever), Smolqn, 
-					Silistra, Bansko, Skopie]
+	CurrentCity      | path
+	Sofia			 | [Plovdiv, Varna, Burgas Vidin, Ruse,
+						Blagoevgrad(Best city ever), Smolqn, 
+						Silistra, Bansko, Skopie]
 
 Като цялата система трябва да подържа. няколко вида търсене:
+
 	-	по критерия дали в града има музей
 	-	по критерия за разстоянието до града
 	-	по азбъчен ред
