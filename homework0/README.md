@@ -16,7 +16,7 @@
 
 	struct GPS 
 	{
-		City currentCity;
+		City currentCity;      //това е наща начална точка. Километрите се броят от нея до дадения град от масива Path.
 		Destination path[10];
 	}
 
