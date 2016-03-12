@@ -39,7 +39,15 @@ void print(Product& product)
     std::cout<<"Type:"<<product.type;
     std::cout<<product.barcode;
 }
-
+std::ostream& operator<< (std::ostream& os, Product& product)
+{
+    os<<"Product name:"<< product.name<< std::endl;
+    os<<"Price:"<< product.price<< std::endl;
+    os<<"ID:"<<product.id<<std::endl;
+    os<<"Type:"<<product.type;
+    os<<product.barcode<<std::endl;
+    return os;
+}
 void destroy(Product& product)
 {
     delete[] product.name;
@@ -54,8 +62,6 @@ struct Market
 	Product *arrProducts;
 	int countProducts;
 	int capacity;
-
-
 
 };
 
@@ -85,7 +91,8 @@ bool hasThisBarcode(Market& market, Product product)
 
 void addProduct(Market& market,Product product)
 {
-    if(market.countProducts < market.capacity){
+    if(market.countProducts < market.capacity)
+    {
         if(!hasThisBarcode(market, product))
         {
             market.arrProducts[market.countProducts] = product;
@@ -103,18 +110,22 @@ char* LowestPriceTypeProduct(Market* arrMarkets, int size, Type type)
     int index = 0;
 
 
-	for(int i=0; i<size; i++){
-		for(int j=0; i<arrMarkets[j].countProducts; j++){
-			if(arrMarkets[i].arrProducts[j].type == type){
+	for(int i=0; i<size; i++)
+	{
+		for(int j=0; i<arrMarkets[j].countProducts; j++)
+		{
+			if(arrMarkets[i].arrProducts[j].type == type)
+			{
 				if(arrMarkets[i].arrProducts[j].price < tempPrice)
 				 {
 					 tempPrice = arrMarkets[i].arrProducts[j].price;
 					 index = i;
 				 }
-		 }
-	}
+            }
+        }
 
-}
+    }
+
 	return arrMarkets[index].nameM;
 }
 void shifft(Market& market, size_t index)
@@ -174,7 +185,7 @@ int main()
 	Create(WaterDevin, WATER, "Morena", "119876543432", 0.8, 721742);
 
 
-
+    std::cout<< CocaCola;
 
 
 
