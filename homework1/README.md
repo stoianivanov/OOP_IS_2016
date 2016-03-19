@@ -22,8 +22,8 @@
 			void removeSong(const char* name); // като аргумент се подава името на песента
 			void removeSong(const int index);  //по индекс от масива(започват от 0)
 			Album(char* name);
-			Album(cahr* name, Song song);
-			ALbum(cahr* name, Song* song);
+			Album(char* name, Song song);
+			ALbum(char* name, Song* song);
 		private:
 			Song* songs;
 			char* name; // Името на албума;
@@ -40,7 +40,7 @@
 			void addSongs(Song* songs);
 			void addAlbum(Album album);
 			void addAlbums(Album* Albums);
-			void removeAlbum(chaр* name);
+			void removeAlbum(char* name);
 
 			void charge();
 			void stopCharge();
