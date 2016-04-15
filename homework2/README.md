@@ -13,8 +13,8 @@
 			size_t size() const;
 
 
-	 		char operator[](size_t idx);
-	 		const char operator[](size_t idx);
+	 		char& operator[](size_t idx);
+	 		const char operator[](size_t idx) const;
 
 			String& operator+=(const String& rhs);
 			bool operator<(const String& rhs);
