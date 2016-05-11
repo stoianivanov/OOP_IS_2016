@@ -1,24 +1,25 @@
-	Да се реализира следния клас:
+Да се реализира следния клас:
 
-	class Mammal
-	{
-	public:
-    	    Mammal();
-    	    Mammal(bool hasFur, unsigned numberOfLegs, unsigned age);
-	
-    	    //declaration of getters and setters here
+class Mammal
+{
+public:
+	Mammal();
+	Mammal(bool hasFur, unsigned numberOfLegs, unsigned age);
 
-    	    virtual char* getSpeciesName() const; //returns the name of the class
-   	    virtual bool eats(Food food) const;//Food is an enum
-	    virtual Color furColor() const;//Color is an enum
-	    virtual bool canJump() const;
-    	    virtual bool canSwim() const;
-    	    virtual bool isSameSpeciesLike(Mammal* otherMammal);
+	//declaration of getters and setters here
 
-	protected:
-    	    bool hasFur;
-    	    unsigned numberOfLegs;
-    	    unsigned age;
-	};
+	virtual char* getSpeciesName() const; //returns the name of the class
+	virtual bool eats(Food food) const;//Food is an enum
+	virtual Color furColor() const;//Color is an enum
+	virtual bool canJump() const;
+	virtual bool canSwim() const;
+	virtual bool isSameSpeciesLike(Mammal* otherMammal);
 
-	Да се реализират класове Hippo, Dog, Kangaroo, Human, които наследяват Mammal.
+protected:
+	bool hasFur;
+	unsigned numberOfLegs;
+	unsigned age;
+};
+
+
+Да се реализират класове Hippo, Dog, Kangaroo, Human, които наследяват Mammal.
